@@ -31,9 +31,6 @@
 // }
 
 
-// let result = '';
-// const lenght = 10;
-//
 // first: for (let i = 0; i < lenght; i++) {
 // 	console.log(`First lvl: ${i}`)
 // 	for (let j = 0; j < 3; j++) {
@@ -44,8 +41,8 @@
 // 		}
 // 	}
 // }
-//
-// console.log(result);
+
+
 
 // for (let i = 5; i < 11; i++) {
 // 	console.log(i);
@@ -80,13 +77,79 @@
 // }
 
 
-function fifthTask() {
-	const arrayOfNumbers = [];
+// function fifthTask() {
+// 	const arrayOfNumbers = [];
+//
+// 	for (let i = 5; i < 11; i++) {
+// 		arrayOfNumbers.push(i);
+// 	}
+// 	// Не трогаем
+// 	return arrayOfNumbers;
+// }
+// console.log(fifthTask())
 
-	for (let i = 5; i < 11; i++) {
-		arrayOfNumbers.push(i);
+// function printNumbersWithStep(N, step) {
+// 	for (let i = 1; i <= N; step++) {
+// 		console.log(i);
+// 	}
+// }
+// console.log(printNumbersWithStep(7, 3))
+
+// function firstTask() {
+// 	// Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+// 	const arr = [3, 5, 8, 16, 20, 23, 50];
+// 	const result = [];
+// 	for (let i = 0; i < arr.length; i++) {
+// 		result[i] = arr[i];
+// 	}
+// 	// Не трогаем
+// 	return result;
+// }
+// console.log(firstTask());
+
+// function secondTask() {
+// 	// Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+// 	const data = [5, 10, 'Shopping', 20, 'Homework'];
+//
+// 	for (let i = 0; i < data.length; i++) {
+// 		if (typeof (data[i]) === 'number') {
+// 			data[i] = data[i] * 2;
+// 		} else if (typeof(data[i]) === 'string') {
+// 			data[i] = `${data[i]} - done`;
+// 		}
+// 	}
+// 	console.log(data);
+// 	// Не трогаем
+// 	return data;
+// }
+// console.log(secondTask());
+
+
+// function thirdTask() {
+// 	// Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+// 	const data = [5, 10, 'Shopping', 20, 'Homework'];
+// 	const result = [];
+// 	for (let i = 0; i < data.length; i++) {
+// 		result[i - 1] = data[data.length - i];
+// 	}
+//
+// 	// Не трогаем
+// 	return result;
+// }
+// console.log(thirdTask());
+
+let result = '';
+const lines = 6;
+
+for (let i = 1; i <= lines; i++) {
+	for (let j = 0; j < lines - i; j++) {
+		result += " ";
 	}
-	// Не трогаем
-	return arrayOfNumbers;
+	for (let k = 0; k < 2 * i -1; k++) {
+		result += '*';
+	}
+	result += '\n';
 }
-console.log(fifthTask())
+console.log(result);
+
+
