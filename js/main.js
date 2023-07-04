@@ -1,294 +1,179 @@
 "use strict"
-// //================================PRACTITE FUNCTION===================================
-// let numberOfFilms;
-// function start() {
-// 	numberOfFilms = +prompt("Скільки фільмів ви вже подивились?", "");
-// 	while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-// 		numberOfFilms = +prompt("Скільки фільмів ви вже подивились?", "");
-// 	}
-// }
-// start();
-//
-// const personalMovieDB = {
-// 	count: numberOfFilms,
-// 	movies: {},
-// 	actors: {},
-// 	genres: [],
-// 	privat: false
-// }
-//
-// function rememberMyFilms () {
-// 	for (let i = 0; i < 2; i++) {
-// 		const a = prompt("Last Film?", "").trim(),
-// 			b = prompt("Lvl?", "");
-// 		if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-// 			personalMovieDB.movies[a] = b;
-// 			console.log("DONE!!!");
-// 		}else {
-// 			console.log('Error');
-// 			i--;
-// 		}
-// 	}
-// }
-// rememberMyFilms();
-//
-// function detectPersonalLvl () {
-// 	if (personalMovieDB.count < 10 ) {
-// 		console.log("You see small films");
-// 	}else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-// 		console.log("You are good man!!!");
-// 	}else if (personalMovieDB.count >= 30) {
-// 		console.log("You love Movies!!!");
-// 	}else {
-// 		console.log("Error!!!");
-// 	}
-// }
-//
-// detectPersonalLvl();
-//
-// function showMyDb (hidden) {
-// 	if (!hidden) {
-// 		console.log(personalMovieDB);
-// 	}
-// }
-// showMyDb(personalMovieDB.privat);
-//
-//
-// function writeYourGenres () {
-// 	for (let i = 1; i <= 3; i++) {
-// 		personalMovieDB.genres[i - 1] = prompt(`Ваш улюблений жанр фільму ${i}`);
-// 	}
-// }
-//
-// writeYourGenres();
-// //================================PRACTITE FUNCTION===================================
-// // //================================CallBack FUNCTION===================================
-// function first() {
-// 	setTimeout(function () {
-// 		console.log(1);
-// 	}, 500
-// 	);
-// }
-//
-// function second() {
-// 	console.log(2);
-// }
-// first();
-// second();
-// function learnJS(lang, callback) {
-// 	console.log(`I learn: ${lang}`);
-// 	callback();
-// }
-// function test () {
-// 	console.log('I finish this less!')
-// }
-// learnJS('JS and React', test);
-//
-// // //================================CallBack FUNCTION===================================
 
-// const obj = new Object();
-//
-// const options = {
-// 	name: 'test',
-// 	width: 1024,
-// 	height: 1024,
-// 	colors: {
-// 		border: 'black',
-// 		bg: 'red'
+// let arr = [
+// 	{
+// 		name:'Bohdan', age: 36
 // 	},
-// 	makeTest: function () {
-// 		console.log('test');
+// 	{
+// 		name: 'Kolia', age: 18
+// 	},
+// 	{
+// 		name: 'Olya,',
+// 		age: 16
 // 	}
-// };
-//
-// options.makeTest();
-//
-// const {border, bg} = options.colors;
-//
-// console.log(border);
+// ]
 
+// let result = arr.filter(function (item, index, array) {
+// 	return item.age >= 18;
+// });
+// console.log(result);
 
-// console.log(Object.keys(options).length);
-
-
-// console.log(options['colors']["border"]);
-
-
-// delete options.name;
-// console.log(options);
+// let arr = ['Bohdan', 'Main', 'Best'];
+// let arrNumbers = [5, 22, 11];
 //
-// let counter = 0;
-//
-//
-//
-// for (let key in options) {
-// 	if (typeof (options) === 'object') {
-// 		for (let i in options[key]) {
-// 			console.log(`Властивості ${i}, має значення: ${options[key][i]}`);
-// 			counter++;
-// 		}
-// 	}else {
-// 		console.log(`Властивості ${key}, має значення: ${options[key]}`);
-// 		counter++;
-// 	}
-// 	counter++;
-// }
-//
-// console.log(counter);
+// console.log(arr.reverse());
+// // function compareNumeric(a, b) {
+// // 	console.log(`Sort: ${a} and  ${b}`);
+// // 	if (a > b) return 1;
+// // 	if( a == b) return 0;
+// // 	if (a < b) return -1;
+// // }
+// console.log(arrNumbers.reverse((a, b) => a - b));
 
-// arr.push(33);
-// console.log(arr);
-// arr[99] = 99;
-// console.log(arr.length);
-// console.log(arr);
-
-// for (let value of arr) {
-// 	console.log(arr[value]);
-// }
-
-// const arr = [1, 62, 31, 8, 5];
+// let arr = ['Bohdan', 'Main', 'Best'];
+// // let result = arr.map(function (item,index,array) {
+// // 	return item[1];
+// // });
+// // let result = arr.join(' , - ');
+// // console.log(arr);
+// // console.log(result);
 //
-// arr.sort(compareNum);
-// console.log(arr);
-// function compareNum(a,  b) {
-// 	return a - b;
-// }
-//
-// arr.forEach(function (item,i,arr) {
-// 	console.log(`${i}: ${item} в серединні массиву ${arr}`);
+// // for (let i = 0; i < arr.length; i++) {
+// // 	console.log(arr[i]);
+// // }
+// // for (let arrOne of arr) {
+// // 	console.log(arrOne);
+// // }
+// arr.forEach(function (item, index, array){
+// 	console.log(`${item} is for ${index} position in ${array}`);
 // })
 
-
-// const str = prompt("", "");
-// const products = str.split(', ');
-// products.sort();
-// console.log(products.join('---'));
-
-//
-// let a = 5,
-// 		b = a;
-//
-// b += 5;
-// console.log(b);
-// console.log(a);
-//
-// const obj = {
-// 	a: 5,
-// 	b: 1
-// }
-
-// const copy = obj;
-// console.log(copy);
-// copy.a = 10;
-// console.log(copy.a);
-
-// function copy (mainObj) {
-// 	let objCopy = {}
-// 	let key;
-// 	for (key in mainObj) {
-// 		objCopy[key] = mainObj[key];
-// 	}
-// 	return objCopy;
-// }
-// const numbers = {
-// 	a: 2,
-// 	b: 5,
-// 	c: {
-// 		x: 7,
-// 		y: 4
-// 	}
-// }
-
-// const add = {
-// 	d: 17,
-// 	e : 20,
-// 	f: {
-// 		a: 2,
-// 		c: 3
-// 	}
-// }
-// const clone = Object.assign({},add);
-// clone.d = 55;
-// console.log(add);
-// console.log(clone);
-// console.log(Object.assign(numbers, add));
-
-// const arr = ['a', 'b', 'c'];
-// const newArr = arr.slice();
-//
+// let arr = ['Vania', 'Ishtwan'];
+// arr.push('Olya');
 // console.log(arr);
+// arr[1] = 'Petya';
+// console.log(arr);
+// let arr = 'Vania,ishtvant,Olya';
+// let newArr = arr.split(' ');
 // console.log(newArr);
-// const newObj = copy(numbers);
-// newObj.c.x = 20;
-// console.log(newObj);
-// console.log(numbers);
-
-// const video = ['youtube', 'vimeo', 'media'],
-// 	blogs = ['wordpress', 'livejournal', 'bloger'],
-// 	internet = [...video, ...blogs, 'in', 'facebook'];
 //
-// console.log(internet);
-//
-//
-// function log(a, b, c) {
-// 	console.log(a, b, c);
-// }
-//
-// const num = [2, 5, 7];
-//
-// log(...num);
-
-
-// const personalPlanPeter = {
-// 	name: "Peter",
-// 	age: "29",
-// 	skills: {
-// 		languages: ['ru', 'eng'],
-// 		programmingLangs: {
-// 			js: '20%',
-// 			php: '10%'
-// 		},
-// 		exp: '1 month'
-// 	}
-// };
-//
-// function showExperience(plan) {
-// 	const {exp} = personalPlanPeter.skills;
-// 	console.log(exp);
-// 	return plan;
-// }
-// showExperience();
-
-
-
-//
-// function showFamily(arr) {
-// 	let str = '';
-// 	arr = family;
-// 	for (let value of arr) {
-// 		str += value;
-// 	}
-//
-// 	if (str === '' ) {
-// 		return 'Семья пуста';
-// 	}
-//
-// 	return `Семья состоит из: ${arr.join(' ')}`;
-// }
-// console.log(showFamily())
 // const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 //
 // function showFamily(arr) {
 // 	let str = '';
 //
-// 	for (let value of family) {
-// 		str += value;
+// 	for (let i of family) {
+// 		str += i;
 // 	}
 //
-// 	if (str === '' &&  arr.length === 0) {
+// 	if (family.length === 0) {
 // 		return 'Семья пуста';
 // 	}
 //
 // 	return `Семья состоит из: ${family.join(' ')}`;
 // }
-// console.log(showFamily());
+// console.log(showFamily())
+// const someString = 'This is some strange string';
+// function reverse(str) {
+// 	let newStr = '';
+// 	for (let i = str.length -1; i >= 0; i--) {
+// 		newStr += str[i];
+// 	}
+// 	return newStr;
+// }
+//
+// console.log(reverse(someString));
+
+// const myCity = {
+// 	city: 'New York',
+// 	cityGreeting () {
+// 		console.log('Greetings!!')
+// 	}
+// }
+//
+// console.log(myCity);
+// console.log(myCity.cityGreeting());
+
+// const test = {
+// 	userId: 1,
+// 	id: 1,
+// 	title: 'Test title',
+// 	status: {
+// 		completed: false,
+// 	},
+// }
+// const newTest = JSON.stringify(test);
+//
+// console.log(test);
+// console.log(newTest);
+//
+// const postStringified = JSON.parse(newTest);
+// console.log(postStringified);
+
+// const person = {
+// 	name: 'Bob',
+// 	age: 21,
+// 	colega: {
+// 		name: 'Bohdan',
+// 		age: 22
+// 	}
+// }
+//
+// // const person2 = Object.assign({}, person);
+//
+// // person2.colega.age = 99;
+//
+// const person2 = {...person};
+// person2.age = 29;
+// console.log(person2);
+// console.log(person);
+// let a = 5;
+// let b = 3;
+//
+//
+// let c
+// c = a + b;
+// console.log(c);
+//
+// a = 8;
+// b = 12;
+//
+// c = a + b;
+// console.log(c);
+//
+//
+// function sum(a, b) {
+// 	const c = a + b;
+// 	console.log(c);
+// }
+//
+//
+// sum(2,3)
+
+// function printName() {
+// 	console.log('Bohdan');
+// }
+// setTimeout(printName, 1000);
+// setTimeout(printName, 2000);
+// setTimeout(printName, 3000);
+// setTimeout(printName, 4000);
+//
+// const a = 5;
+// function myFn() {
+// 	function innerFn() {
+// 		console.log(a)
+// 	}
+// 	innerFn()
+// }
+// myFn()
+// const soldier = {
+// 	health: 400,
+// 	armor: 100
+// }
+//
+// const jonh = {
+// 	health: 100,
+// }
+//
+// jonh.__proto__ = soldier;
+// console.log(jonh)
